@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Les données utilisées &#8212; Analyse du débat sur la réforme des retraites de 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_the_data';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Séances à l’assemblée nationale" href="02_debat_parlement.html" />
+    <link rel="prev" title="Analyse du débat des parlementaires sur la réforme des retraites de 2023" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Analyse du débat sur la réforme des retraites de 2023</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Analyse du débat des parlementaires sur la réforme des retraites de 2023
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Les données utilisées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_debat_parlement.html">2. Séances à l’assemblée nationale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_debat_depute_twitter.html">3. Les parlementaires sur le réseau social Twitter</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F01_the_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/01_the_data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Les données utilisées</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-sur-les-parlementaires">1.1. Données sur les parlementaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-in-a-nutshell">1.2.1. HTML in a nutshell 🥜</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-des-tweets-des-parlementaires-twitter">1.3. Collection des tweets des parlementaires (Twitter)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="les-donnees-utilisees">
+<span id="file-types-notebooks"></span><h1><span class="section-number">1. </span>Les données utilisées<a class="headerlink" href="#les-donnees-utilisees" title="Permalink to this headline">#</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#donnees-sur-les-parlementaires" id="id5">Données sur les parlementaires</a></p></li>
+<li><p><a class="reference internal" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" id="id6">Transcription du débat de la réforme à l’assemblée nationale</a></p>
+<ul>
+<li><p><a class="reference internal" href="#html-in-a-nutshell" id="id7">HTML in a nutshell 🥜</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#collection-des-tweets-des-parlementaires-twitter" id="id8">Collection des tweets des parlementaires (Twitter)</a></p></li>
+</ul>
+</div>
+<p>Pour analyser le débat des retraites, nous proposons d’analyser le discours de nos représentants, ici les parlementaires. Pour cela, nous proposons d’analyser
+deux sources de données : Twitter et Assemblée Nationale.</p>
+<div class="section" id="donnees-sur-les-parlementaires">
+<h2><a class="toc-backref" href="#id5"><span class="section-number">1.1. </span>Données sur les parlementaires</a><a class="headerlink" href="#donnees-sur-les-parlementaires" title="Permalink to this headline">#</a></h2>
+<p>Dans l’analyse des données provenant de nos deux corpus, il est nécessaire d’obtenir différentes informations concernant les parlementaires comme un identifiant unique, à quel groupe appartient-il(elle), a-t-il(elle) un compte sur
+Twitter, etc. Si les données sont rendus par l’administration publique, leur parcours est fastidieux ! Heureusement, les personnes derrières le site <a class="reference external" href="https://www.nosdeputes.fr/">NosDéputés.fr</a> propose une table synthétique<a class="footnote-reference brackets" href="#nos-deputes-fichier" id="id1">1</a> contenant les informations nécessaires. Pour chaque député, un identifiant (<code class="docutils literal notranslate"><span class="pre">slug</span></code> dans le fichier) est associé à chaque député. Dans les fichiers mises à disposition ici, nous utiliserons ces identifiants.</p>
+</div>
+<div class="section" id="transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">
+<h2><a class="toc-backref" href="#id6"><span class="section-number">1.2. </span>Transcription du débat de la réforme à l’assemblée nationale</a><a class="headerlink" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" title="Permalink to this headline">#</a></h2>
+<p>Selon l’article 33 de la constitution<a class="footnote-reference brackets" href="#texte-constitution" id="id2">2</a>:</p>
+<blockquote>
+<div><p>Les séances des deux assemblées sont publiques. Le compte rendu intégral des débats est publié au Journal officiel.<br><br> Chaque assemblée peut siéger en comité secret à la demande du Premier ministre ou d’un dixième de ses membres.</p>
+</div></blockquote>
+<p>Depuis 2017, l’ensemble des transcriptions des séances à l’assemblée nationale sont disponible son <a class="reference external" href="https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/seance/">site web</a>. Pour récupérer ces données dans un format exploitable (.csv), plusieurs solutions sont
+envisageables. A l’aide des fichiers <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> de chaque séance, programmer un code permettant d’en extraire les interventions des députés. Problème, il est difficile de séparer les différents blocs de textes (auteur, intervention, etc.) à cause du format du PDF. La deuxième solution est de faire un programme de <em>web-scrapping</em> qui récupérera le code HTML<a class="footnote-reference brackets" href="#html-def" id="id3">3</a> des pages webs des séances disponibles sur le site de l’assemblée nationale.</p>
+<div class="section" id="html-in-a-nutshell">
+<h3><a class="toc-backref" href="#id7"><span class="section-number">1.2.1. </span>HTML in a nutshell 🥜</a><a class="headerlink" href="#html-in-a-nutshell" title="Permalink to this headline">#</a></h3>
+<p>L’HTML ou HyperText Markup Language est un language permettant de décrire le contenu d’une page web (texte, image, vidéo, etc.), le style (couleur du texte, police de caractères) et plein d’autres choses. Le code suivant permet d’afficher une image suivi d’un texte:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cataas.com/cat/says/meow?size=1&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;image de chat&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cat_image&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;image&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;legend-image-chat&quot;</span><span class="p">&gt;</span>
+    Ceci est un chat ! 
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ce qui donnera le résultat suivant:</p>
+<div style="background-color:#aaa;width:300px;padding:1em;">
+<img src="https://cataas.com/cat/says/meow?size=1" style="width:100%" alt="image de chat" id="cat_image" class="image"/>
+<p id="legend-image-chat" style="color:black;">
+    Ceci est un chat ! 
+</p>
+</div>
+<br> 
+<p>Un code HTML est composé de balises pour chaque type de contenue que l’on veut afficher. La balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> permet d’afficher une image, la balise <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> permet d’afficher un paragraphe, etc. Dans ces balises, il est possible de rajouter des attributs pour
+impacter le style de l’élément (taille, couleur, etc) ou lui assigner des identifiants:  <code class="docutils literal notranslate"><span class="pre">id=\&quot;...&quot;</span></code>  et <code class="docutils literal notranslate"><span class="pre">class=\&quot;...&quot;</span></code>. Ces identifiants permettent de rassembler ou d’isoler certains éléments à l’aide de labels. Un des avantages premier est d’appliquer un même style à plusieurs balises. Par exemple, je veux que tous mes paragraphes <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> soit de couleur rouge. Pour cela, j’ajoute un attribut <code class="docutils literal notranslate"><span class="pre">class=&quot;red-paragraph&quot;</span></code> à mes balises, puis dans un fichier extérieur (fichier CSS), j’indique que le contenu des balises <code class="docutils literal notranslate"><span class="pre">&lt;p</span> <span class="pre">class=&quot;red-paragraph&quot;&gt;</span></code> sera de couleur rouge comme ceci:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">.</span><span class="nc">red-paragraph</span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Le deuxième avantage, celui qui nous intéresse est de pouvoir permettre à un programme informatique de retrouver les éléments d’une page ! Le code ci-dessous est une extrait de la page contenant la transcription d’une séance publique. En utilisant, les identifiants indiqués par l’attribut <code class="docutils literal notranslate"><span class="pre">class</span></code>, on voit que toutes les transcriptions se trouvent dans le block <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> avec l’identifiant <code class="docutils literal notranslate"><span class="pre">intervention</span></code>  qui lui-même se trouve dans un block <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> avec l’identifiant <code class="docutils literal notranslate"><span class="pre">crs-inter-groupe.</span></code></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;crs-inter-groupe&quot;</span><span class="p">&gt;</span>
+    ...
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;intervention&quot;</span><span class="p">&gt;</span>
+        Hier soir, l’Assemblée a poursuivi la discussion des articles, s’arrêtant à l’amendement n<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>o<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> 1447 portant article additionnel après l’article 3.
+    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Une fois que vous avez compris la mécanique, il suffit d’identifier quelles sont les identifiants contenant :</p>
+<ul class="simple">
+<li><p>le texte de l’intervention</p></li>
+<li><p>le nom de l’intervenant</p></li>
+<li><p>le nom de la personne qui préside la séance</p></li>
+<li><p>l’organisation de la séance (section, sous-section)</p></li>
+<li><p>la date de la séance</p></li>
+<li><p>etc..</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le programme de web-scrapping des séances publiques à l’assemblée nationale est disponible <a class="reference external" href="https://github.com/Jacobe2169/debat_parlement_text_analysis/blob/master/1_get_transcript_seance_assemblee.py">ici</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="collection-des-tweets-des-parlementaires-twitter">
+<h2><a class="toc-backref" href="#id8"><span class="section-number">1.3. </span>Collection des tweets des parlementaires (Twitter)</a><a class="headerlink" href="#collection-des-tweets-des-parlementaires-twitter" title="Permalink to this headline">#</a></h2>
+<p>Une des particularités du débat parlementaires pour la réforme des retraites est sa courte durée. En effet, si une première lecture est effectuée entre le 6 février et le 16 février 2023, l’utilisation du 49.3 ne permettra pas d’autres débat dans l’hémicycle. Le traitement de la réforme des retraites par les parlementaires ne se confine pas au palais Bourbon ! Une majorité de responsable politique utilise les réseaux sociaux pour déclarer leur position en réaction à différents événements. Il est donc intéressant de traiter ces interventions ! Dans le cadre de la réforme des retraites, ces interventions se déroulent sur une plus grande période ! Nous avons choisi de récupérer les tweets de la première lecture du texte au retrait de l’amendement LIOT du 7 juin 2023.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Seulement 17 députés n’ont pas de compte Twitter. <strong>(Source: <a class="reference external" href="http://xn--NosDputs-e1ad.fr">NosDéputés.fr</a>)</strong></p>
+</div>
+<p>Pour extraire des données provenant de la plateforme Twitter, il est d’usage d’utiliser API<a class="footnote-reference brackets" href="#twitter-api" id="id4">4</a> de cette dernière. Elle permet de faire des requêtes sur la base de données Twitter pour récupérer des informations sur des utilisateurs, des tweets, mais aussi d’appliquer des filtres (date, mots-clés, etc.). Malheureusement, depuis le rachat de Twitter par Elon Musk, l’accès gratuit de l’API est devenu très restreint et les offres payants beaucoup trop onéreuse pour ma simple personne ! Une autre méthode est, vous l’avez deviné, de passer par du web-scrapping ! Comme pour les séances publiques, nous récupérons l’HTML de la page Twitter d’un député, puis l’on extrait ses tweets jusqu’à la date souhaitée !</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depuis le 1er juillet, il n’est plus possible (ou difficile) de faire du web-scrapping sur Twitter.</p>
+<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">To address extreme levels of data scraping &amp; system manipulation, we’ve applied the following temporary limits:<br><br>- Verified accounts are limited to reading 6000 posts/day<br>- Unverified accounts to 600 posts/day<br>- New unverified accounts to 300/day</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1675187969420828672?ref_src=twsrc%5Etfw">July 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le code pour récupérer les tweets est disponible <a class="reference external" href="https://gist.github.com/Jacobe2169/1496ec6517cde2d323bdcbee7da5d460">ici</a></p>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="nos-deputes-fichier"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/regardscitoyens/nosdeputes.fr/blob/master/doc/opendata.md">Source des données en CSV</a></p>
+</dd>
+<dt class="label" id="texte-constitution"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur">Texte intégrale de la constitution de 1958</a></p>
+</dd>
+<dt class="label" id="html-def"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTML">Qu’est que le HTML ?</a> (documentation de Mozilla)</p>
+</dd>
+<dt class="label" id="twitter-api"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p><a class="reference external" href="https://developer.twitter.com/en/docs/twitter-api">Lien vers la documentation de l’API de Twitter</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Analyse du débat des parlementaires sur la réforme des retraites de 2023</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_debat_parlement.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Séances à l’assemblée nationale</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-sur-les-parlementaires">1.1. Données sur les parlementaires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-in-a-nutshell">1.2.1. HTML in a nutshell 🥜</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-des-tweets-des-parlementaires-twitter">1.3. Collection des tweets des parlementaires (Twitter)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright Jacques Fize 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
