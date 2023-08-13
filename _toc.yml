@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options:
+  numbered: true
+
+
+chapters:
+- file: 01_the_data
+- file: 02_debat_parlement
+- file: 03_debat_depute_twitter
