@@ -34,4 +34,14 @@ Contrairement aux mots-clés formés d'un mot, la différence de distribution po
 
 - déni de démocratie --> LFI, ECO
 - temps de travails --> LFI et écolol
-- 
+
+
+https://data.assemblee-nationale.fr/travaux-parlementaires/debats
+https://echanges.dila.gouv.fr/OPENDATA/Protocole_du_Gouvernement/DILA_Gouvernement_protocole_20230721.xml
+https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/
+
+
+https://hal.science/hal-01832649/file/22_W2.pdf
+https://www.researchgate.net/profile/Cornelia-Ilie/publication/303433805_Parliamentary_Discourse_and_Deliberative_Rhetoric/links/5b32753ea6fdcc8506d11135/Parliamentary-Discourse-and-Deliberative-Rhetoric.pdf
+https://journals.sagepub.com/doi/pdf/10.1177/09579265030143004?casa_token=McVsnp_b9QoAAAAA:66uWL6bpOfMf_HVYx4shj-w2w7sLevhocY88CR_pc2JNCtrZgS6Srzga2_3fICekLqf1_Soh59s
+https://www.researchgate.net/profile/Cornelia-Ilie/publication/303459695_Parliamentary_Discourse/links/59d9dbdc458515a5bc2b1b17/Parliamentary-Discourse.pdf
