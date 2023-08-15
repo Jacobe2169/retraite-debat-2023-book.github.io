@@ -1,0 +1,1 @@
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://jacobe2169.github.io/retraite-debat-2023-book.github.io)
