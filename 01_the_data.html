@@ -347,11 +347,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-sur-les-parlementaires">1.1. Données sur les parlementaires</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-in-a-nutshell">1.2.1. HTML in a nutshell 🥜</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-des-tweets-des-parlementaires-twitter">1.3. Collection des tweets des parlementaires (Twitter)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-et-scripts">1.4. Sources et scripts</a></li>
 </ul>
             </nav>
         </div>
@@ -367,95 +365,80 @@ document.write(`
 <span id="file-types-notebooks"></span><h1><span class="section-number">1. </span>Les données utilisées<a class="headerlink" href="#les-donnees-utilisees" title="Permalink to this headline">#</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#donnees-sur-les-parlementaires" id="id5">Données sur les parlementaires</a></p></li>
-<li><p><a class="reference internal" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" id="id6">Transcription du débat de la réforme à l’assemblée nationale</a></p>
-<ul>
-<li><p><a class="reference internal" href="#html-in-a-nutshell" id="id7">HTML in a nutshell 🥜</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#collection-des-tweets-des-parlementaires-twitter" id="id8">Collection des tweets des parlementaires (Twitter)</a></p></li>
+<li><p><a class="reference internal" href="#donnees-sur-les-parlementaires" id="id4">Données sur les parlementaires</a></p></li>
+<li><p><a class="reference internal" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" id="id5">Transcription du débat de la réforme à l’assemblée nationale</a></p></li>
+<li><p><a class="reference internal" href="#collection-des-tweets-des-parlementaires-twitter" id="id6">Collection des tweets des parlementaires (Twitter)</a></p></li>
+<li><p><a class="reference internal" href="#sources-et-scripts" id="id7">Sources et scripts</a></p></li>
 </ul>
 </div>
 <p>Pour analyser le débat des retraites, nous proposons d’analyser le discours de nos représentants, ici les parlementaires. Pour cela, nous proposons d’analyser
 deux sources de données : Twitter et Assemblée Nationale.</p>
 <div class="section" id="donnees-sur-les-parlementaires">
-<h2><a class="toc-backref" href="#id5"><span class="section-number">1.1. </span>Données sur les parlementaires</a><a class="headerlink" href="#donnees-sur-les-parlementaires" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4"><span class="section-number">1.1. </span>Données sur les parlementaires</a><a class="headerlink" href="#donnees-sur-les-parlementaires" title="Permalink to this headline">#</a></h2>
 <p>Dans l’analyse des données provenant de nos deux corpus, il est nécessaire d’obtenir différentes informations concernant les parlementaires comme un identifiant unique, à quel groupe appartient-il(elle), a-t-il(elle) un compte sur
 Twitter, etc. Si les données sont rendus par l’administration publique, leur parcours est fastidieux ! Heureusement, les personnes derrières le site <a class="reference external" href="https://www.nosdeputes.fr/">NosDéputés.fr</a> propose une table synthétique<a class="footnote-reference brackets" href="#nos-deputes-fichier" id="id1">1</a> contenant les informations nécessaires. Pour chaque député, un identifiant (<code class="docutils literal notranslate"><span class="pre">slug</span></code> dans le fichier) est associé à chaque député. Dans les fichiers mises à disposition ici, nous utiliserons ces identifiants.</p>
 </div>
 <div class="section" id="transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">
-<h2><a class="toc-backref" href="#id6"><span class="section-number">1.2. </span>Transcription du débat de la réforme à l’assemblée nationale</a><a class="headerlink" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id5"><span class="section-number">1.2. </span>Transcription du débat de la réforme à l’assemblée nationale</a><a class="headerlink" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale" title="Permalink to this headline">#</a></h2>
 <p>Selon l’article 33 de la constitution<a class="footnote-reference brackets" href="#texte-constitution" id="id2">2</a>:</p>
 <blockquote>
 <div><p>Les séances des deux assemblées sont publiques. Le compte rendu intégral des débats est publié au Journal officiel.<br><br> Chaque assemblée peut siéger en comité secret à la demande du Premier ministre ou d’un dixième de ses membres.</p>
 </div></blockquote>
-<p>Depuis 2017, l’ensemble des transcriptions des séances à l’assemblée nationale sont disponible son <a class="reference external" href="https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/seance/">site web</a>. Pour récupérer ces données dans un format exploitable (.csv), plusieurs solutions sont
-envisageables. A l’aide des fichiers <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> de chaque séance, programmer un code permettant d’en extraire les interventions des députés. Problème, il est difficile de séparer les différents blocs de textes (auteur, intervention, etc.) à cause du format du PDF. La deuxième solution est de faire un programme de <em>web-scrapping</em> qui récupérera le code HTML<a class="footnote-reference brackets" href="#html-def" id="id3">3</a> des pages webs des séances disponibles sur le site de l’assemblée nationale.</p>
-<div class="section" id="html-in-a-nutshell">
-<h3><a class="toc-backref" href="#id7"><span class="section-number">1.2.1. </span>HTML in a nutshell 🥜</a><a class="headerlink" href="#html-in-a-nutshell" title="Permalink to this headline">#</a></h3>
-<p>L’HTML ou HyperText Markup Language est un language permettant de décrire le contenu d’une page web (texte, image, vidéo, etc.), le style (couleur du texte, police de caractères) et plein d’autres choses. Le code suivant permet d’afficher une image suivi d’un texte:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cataas.com/cat/says/meow?size=1&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;image de chat&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cat_image&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;image&quot;</span><span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;legend-image-chat&quot;</span><span class="p">&gt;</span>
-    Ceci est un chat ! 
-<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<p>Depuis 2017, l’ensemble des transcriptions des séances à l’assemblée nationale sont disponible son <a class="reference external" href="https://data.assemblee-nationale.fr/travaux-parlementaires/debats">site web</a>. Les données sont dans des fichiers au format XML (voir extrait ci-dessous).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</span>
+<span class="nt">&lt;compteRendu</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://schemas.assemblee-nationale.fr/referentiel&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;uid&gt;</span>CRSANR5L16S2022E1N003<span class="nt">&lt;/uid&gt;</span>
+<span class="w">  </span><span class="nt">&lt;seanceRef&gt;</span>RUANR5L16S2022IDS26199<span class="nt">&lt;/seanceRef&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sessionRef&gt;</span>SCR5A2022E1<span class="nt">&lt;/sessionRef&gt;</span>
+<span class="w">  </span><span class="nt">&lt;metadonnees&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dateSeance&gt;</span>20220711213000000<span class="nt">&lt;/dateSeance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dateSeanceJour&gt;</span>lundi<span class="w"> </span>11<span class="w"> </span>juillet<span class="w"> </span>2022<span class="nt">&lt;/dateSeanceJour&gt;</span>
+<span class="w">    </span><span class="nt">&lt;numSeanceJour&gt;</span>2<span class="nt">&lt;/numSeanceJour&gt;</span>
+<span class="w">    </span><span class="nt">&lt;numSeance&gt;</span>3<span class="nt">&lt;/numSeance&gt;</span>
+<span class="w">    </span><span class="nt">&lt;typeAssemblee&gt;</span>AN<span class="nt">&lt;/typeAssemblee&gt;</span>
+<span class="w">    </span><span class="nt">&lt;legislature&gt;</span>16<span class="nt">&lt;/legislature&gt;</span>
+<span class="w">    </span><span class="nt">&lt;session&gt;</span>Première<span class="w"> </span>session<span class="w"> </span>extraordinaire<span class="w"> </span>2022<span class="nt">&lt;/session&gt;</span>
+<span class="w">    </span><span class="nt">&lt;nomFichierJo&gt;</span>20221003<span class="nt">&lt;/nomFichierJo&gt;</span>
+<span class="w">    </span><span class="nt">&lt;validite&gt;</span>valide<span class="nt">&lt;/validite&gt;</span>
+<span class="w">    </span><span class="nt">&lt;etat&gt;</span>complet<span class="nt">&lt;/etat&gt;</span>
+<span class="w">    </span><span class="nt">&lt;diffusion&gt;</span>public<span class="nt">&lt;/diffusion&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>avant_JO<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;environnement&gt;</span>PROD<span class="nt">&lt;/environnement&gt;</span>
+<span class="w">    </span><span class="nt">&lt;heureGeneration&gt;</span>2022-07-22T21:36:46.000+02:00<span class="nt">&lt;/heureGeneration&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sommaire&gt;</span>
+<span class="w">      </span><span class="nt">&lt;presidentSeance</span><span class="w"> </span><span class="na">id_syceron=</span><span class="s">&quot;2808681&quot;</span><span class="nt">&gt;</span>Présidence<span class="w"> </span>de<span class="w"> </span>M.<span class="w"> </span>Sébastien<span class="w"> </span>Chenu<span class="nt">&lt;/presidentSeance&gt;</span>
+<span class="w">      </span><span class="nt">&lt;sommaire1</span><span class="w"> </span><span class="na">valeur_pts_odj=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;titreStruct</span><span class="w"> </span><span class="na">id_syceron=</span><span class="s">&quot;2808685&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;intitule&gt;</span>Veille<span class="w"> </span>et<span class="w"> </span>sécurité<span class="w"> </span>sanitaire<span class="w"> </span>en<span class="w"> </span>matière<span class="w"> </span>de<span class="w"> </span>lutte<span class="w"> </span>contre<span class="w"> </span>la<span class="w"> </span>covid-19<span class="nt">&lt;/intitule&gt;</span>
+<span class="w">          </span><span class="nt">&lt;sousIntitule&gt;</span>0<span class="nt">&lt;/sousIntitule&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/titreStruct&gt;</span>
+<span class="w">        </span><span class="nt">&lt;para</span><span class="w"> </span><span class="na">id_syceron=</span><span class="s">&quot;2808686&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;sommaire2&gt;</span>
+<span class="w">          </span><span class="nt">&lt;titreStruct</span><span class="w"> </span><span class="na">id_syceron=</span><span class="s">&quot;2808688&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;intitule&gt;</span>Présentation<span class="nt">&lt;/intitule&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/titreStruct&gt;</span>
+[...]
 </pre></div>
-</div>
-<p>Ce qui donnera le résultat suivant:</p>
-<div style="background-color:#aaa;width:300px;padding:1em;">
-<img src="https://cataas.com/cat/says/meow?size=1" style="width:100%" alt="image de chat" id="cat_image" class="image"/>
-<p id="legend-image-chat" style="color:black;">
-    Ceci est un chat ! 
-</p>
-</div>
-<br> 
-<p>Un code HTML est composé de balises pour chaque type de contenue que l’on veut afficher. La balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> permet d’afficher une image, la balise <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> permet d’afficher un paragraphe, etc. Dans ces balises, il est possible de rajouter des attributs pour
-impacter le style de l’élément (taille, couleur, etc) ou lui assigner des identifiants:  <code class="docutils literal notranslate"><span class="pre">id=\&quot;...&quot;</span></code>  et <code class="docutils literal notranslate"><span class="pre">class=\&quot;...&quot;</span></code>. Ces identifiants permettent de rassembler ou d’isoler certains éléments à l’aide de labels. Un des avantages premier est d’appliquer un même style à plusieurs balises. Par exemple, je veux que tous mes paragraphes <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> soit de couleur rouge. Pour cela, j’ajoute un attribut <code class="docutils literal notranslate"><span class="pre">class=&quot;red-paragraph&quot;</span></code> à mes balises, puis dans un fichier extérieur (fichier CSS), j’indique que le contenu des balises <code class="docutils literal notranslate"><span class="pre">&lt;p</span> <span class="pre">class=&quot;red-paragraph&quot;&gt;</span></code> sera de couleur rouge comme ceci:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">.</span><span class="nc">red-paragraph</span><span class="p">{</span>
-<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Le deuxième avantage, celui qui nous intéresse est de pouvoir permettre à un programme informatique de retrouver les éléments d’une page ! Le code ci-dessous est une extrait de la page contenant la transcription d’une séance publique. En utilisant, les identifiants indiqués par l’attribut <code class="docutils literal notranslate"><span class="pre">class</span></code>, on voit que toutes les transcriptions se trouvent dans le block <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code> avec l’identifiant <code class="docutils literal notranslate"><span class="pre">intervention</span></code>  qui lui-même se trouve dans un block <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> avec l’identifiant <code class="docutils literal notranslate"><span class="pre">crs-inter-groupe.</span></code></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;crs-inter-groupe&quot;</span><span class="p">&gt;</span>
-    ...
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;intervention&quot;</span><span class="p">&gt;</span>
-        Hier soir, l’Assemblée a poursuivi la discussion des articles, s’arrêtant à l’amendement n<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span>o<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> 1447 portant article additionnel après l’article 3.
-    <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Une fois que vous avez compris la mécanique, il suffit d’identifier quelles sont les identifiants contenant :</p>
-<ul class="simple">
-<li><p>le texte de l’intervention</p></li>
-<li><p>le nom de l’intervenant</p></li>
-<li><p>le nom de la personne qui préside la séance</p></li>
-<li><p>l’organisation de la séance (section, sous-section)</p></li>
-<li><p>la date de la séance</p></li>
-<li><p>etc..</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Le programme de web-scrapping des séances publiques à l’assemblée nationale est disponible <a class="reference external" href="https://github.com/Jacobe2169/debat_parlement_text_analysis/blob/master/1_get_transcript_seance_assemblee.py">ici</a>.</p>
-</div>
 </div>
 </div>
 <div class="section" id="collection-des-tweets-des-parlementaires-twitter">
-<h2><a class="toc-backref" href="#id8"><span class="section-number">1.3. </span>Collection des tweets des parlementaires (Twitter)</a><a class="headerlink" href="#collection-des-tweets-des-parlementaires-twitter" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id6"><span class="section-number">1.3. </span>Collection des tweets des parlementaires (Twitter)</a><a class="headerlink" href="#collection-des-tweets-des-parlementaires-twitter" title="Permalink to this headline">#</a></h2>
 <p>Une des particularités du débat parlementaires pour la réforme des retraites est sa courte durée. En effet, si une première lecture est effectuée entre le 6 février et le 16 février 2023, l’utilisation du 49.3 ne permettra pas d’autres débat dans l’hémicycle. Le traitement de la réforme des retraites par les parlementaires ne se confine pas au palais Bourbon ! Une majorité de responsable politique utilise les réseaux sociaux pour déclarer leur position en réaction à différents événements. Il est donc intéressant de traiter ces interventions ! Dans le cadre de la réforme des retraites, ces interventions se déroulent sur une plus grande période ! Nous avons choisi de récupérer les tweets de la première lecture du texte au retrait de l’amendement LIOT du 7 juin 2023.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Seulement 17 députés n’ont pas de compte Twitter. <strong>(Source: <a class="reference external" href="http://xn--NosDputs-e1ad.fr">NosDéputés.fr</a>)</strong></p>
 </div>
-<p>Pour extraire des données provenant de la plateforme Twitter, il est d’usage d’utiliser API<a class="footnote-reference brackets" href="#twitter-api" id="id4">4</a> de cette dernière. Elle permet de faire des requêtes sur la base de données Twitter pour récupérer des informations sur des utilisateurs, des tweets, mais aussi d’appliquer des filtres (date, mots-clés, etc.). Malheureusement, depuis le rachat de Twitter par Elon Musk, l’accès gratuit de l’API est devenu très restreint et les offres payants beaucoup trop onéreuse pour ma simple personne ! Une autre méthode est, vous l’avez deviné, de passer par du web-scrapping ! Comme pour les séances publiques, nous récupérons l’HTML de la page Twitter d’un député, puis l’on extrait ses tweets jusqu’à la date souhaitée !</p>
+<p>Pour extraire des données provenant de la plateforme Twitter, il est d’usage d’utiliser API<a class="footnote-reference brackets" href="#twitter-api" id="id3">3</a> de cette dernière. Elle permet de faire des requêtes sur la base de données Twitter pour récupérer des informations sur des utilisateurs, des tweets, mais aussi d’appliquer des filtres (date, mots-clés, etc.). Malheureusement, depuis le rachat de Twitter par Elon Musk, l’accès gratuit de l’API est devenu très restreint et les offres payants beaucoup trop onéreuse pour ma simple personne ! Une autre méthode est, vous l’avez deviné, de passer par du web-scrapping ! Comme pour les séances publiques, nous récupérons l’HTML de la page Twitter d’un député, puis l’on extrait ses tweets jusqu’à la date souhaitée !</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Depuis le 1er juillet, il n’est plus possible (ou difficile) de faire du web-scrapping sur Twitter.</p>
 <blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">To address extreme levels of data scraping &amp; system manipulation, we’ve applied the following temporary limits:<br><br>- Verified accounts are limited to reading 6000 posts/day<br>- Unverified accounts to 600 posts/day<br>- New unverified accounts to 300/day</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1675187969420828672?ref_src=twsrc%5Etfw">July 1, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Le code pour récupérer les tweets est disponible <a class="reference external" href="https://gist.github.com/Jacobe2169/1496ec6517cde2d323bdcbee7da5d460">ici</a></p>
 </div>
+<div class="section" id="sources-et-scripts">
+<h2><a class="toc-backref" href="#id7"><span class="section-number">1.4. </span>Sources et scripts</a><a class="headerlink" href="#sources-et-scripts" title="Permalink to this headline">#</a></h2>
+<p>Le code pour récupérer les tweets est disponible <a class="reference external" href="https://gist.github.com/Jacobe2169/1496ec6517cde2d323bdcbee7da5d460">ici</a>. Les données extraites de Twitter sont disponibles ici : <span class="xref myst">[En cours]</span>. Les données brutes des débats parlementaires à l’assemblée nationale sont disponibles <a class="reference external" href="https://data.assemblee-nationale.fr/travaux-parlementaires/debats">ici</a>.</p>
+<p>Le script pour la transformation et la complétion des données brutes est disponible sur le repository GitHub du livre (<a class="reference external" href="https://github.com/Jacobe2169/retraite-debat-2023-book.github.io/blob/main/generate_datasets.py">lien</a>)</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="nos-deputes-fichier"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -464,10 +447,7 @@ impacter le style de l’élément (taille, couleur, etc) ou lui assigner des id
 <dt class="label" id="texte-constitution"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p><a class="reference external" href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/texte-integral-de-la-constitution-du-4-octobre-1958-en-vigueur">Texte intégrale de la constitution de 1958</a></p>
 </dd>
-<dt class="label" id="html-def"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/HTML">Qu’est que le HTML ?</a> (documentation de Mozilla)</p>
-</dd>
-<dt class="label" id="twitter-api"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dt class="label" id="twitter-api"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p><a class="reference external" href="https://developer.twitter.com/en/docs/twitter-api">Lien vers la documentation de l’API de Twitter</a></p>
 </dd>
 </dl>
@@ -542,11 +522,9 @@ impacter le style de l’élément (taille, couleur, etc) ou lui assigner des id
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#donnees-sur-les-parlementaires">1.1. Données sur les parlementaires</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-in-a-nutshell">1.2.1. HTML in a nutshell 🥜</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transcription-du-debat-de-la-reforme-a-l-assemblee-nationale">1.2. Transcription du débat de la réforme à l’assemblée nationale</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-des-tweets-des-parlementaires-twitter">1.3. Collection des tweets des parlementaires (Twitter)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-et-scripts">1.4. Sources et scripts</a></li>
 </ul>
   </nav></div>
 
